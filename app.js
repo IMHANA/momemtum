@@ -8,4 +8,5 @@ function outer() {
 let increase = outer();
 
 console.log(increase());
-console.log(increase());
+console.log(increase);
+console.log(outer());
