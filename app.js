@@ -1,13 +1,11 @@
-function setDivClick(index) {
-    document.getElementById("divScope" + index).addEventListener(
+let i, len = 3;
+for(i = 0; i < len; i++) {
+    document.getElementById("divScope" + i).addEventListener(
         "click",
-        function() {
-            alert("You clicked div#" + index);
-        },
-        false
-    );
-}
-var i, len = 3;
-for (i = 0; i < len; i++) {
-    setDivClick(i);
+        (function (index) {
+            return function () {
+                alert("You clicked div #" + index);
+            };
+        }(i)),
+    false);
 }
