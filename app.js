@@ -1,13 +1,13 @@
-function foo() {
-    var b = "Can you access here?";
+function setDivClick(index) {
+    document.getElementById("divScope" + index).addEventListener(
+        "click",
+        function() {
+            alert("You clicked div#" + index);
+        },
+        false
+    );
 }
-console.log(typeof b === "undefined");
-
-try {
-    throw new exception("fake exception");
-} catch (err) {
-    var test = "this is an error";
-    console.log(err instanceof ReferenceError === true);
+var i, len = 3;
+for (i = 0; i < len; i++) {
+    setDivClick(i);
 }
-console.log(test === "this is an error");
-console.log(typeof err === "undefined");
