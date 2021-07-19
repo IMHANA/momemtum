@@ -1,12 +1,13 @@
-for(var i = 0; i < 10; i++) {
-    var total = (total || 0) + i;
-    var last = i;
-    if (total > 16) {
-        break;
-    }
+function foo() {
+    var b = "Can you access here?";
 }
-console.log(typeof total !== "undefined");
-console.log(typeof last !== "undefined");
-console.log(typeof i !== "undefined");
-console.log("total === " + total + " , last === " + last);
-//
+console.log(typeof b === "undefined");
+
+try {
+    throw new exception("fake exception");
+} catch (err) {
+    var test = "this is an error";
+    console.log(err instanceof ReferenceError === true);
+}
+console.log(test === "this is an error");
+console.log(typeof err === "undefined");
