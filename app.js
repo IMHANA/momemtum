@@ -9,3 +9,4 @@ console.log(typeof total !== "undefined");
 console.log(typeof last !== "undefined");
 console.log(typeof i !== "undefined");
 console.log("total === " + total + " , last === " + last);
+//
